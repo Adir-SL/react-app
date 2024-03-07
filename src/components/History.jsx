@@ -16,6 +16,10 @@ const History = (props) => {
                                 <div className="icon-button"></div>
                             </summary>
                             <div className="menu">
+                            <div className="menu-item">
+                                    <div className="menu-icon rename"></div>
+                                    Rename
+                                </div>
                                 <div className="menu-item">
                                     <div className="menu-icon pdf"></div>
                                     Export to PDF
