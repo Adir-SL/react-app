@@ -17,7 +17,7 @@ const Login = (props) => {
                 <Input type="text" header="Enter your credentials" content="User Name" placetext="Enter your user name" />
                 <Input type="password" content="Password" placetext="Enter your password" />
                 <Button label="Login" onClick={() => {
-                    setUsername('Adam');
+                    setUsername(document.querySelectorAll('input')[0].value);
                     setTimeout(function(){
                         props.onlogin(false);
                     }, 200);
