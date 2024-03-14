@@ -10,7 +10,7 @@ import "./App.css";
 
 const App = () => {
     const [sessionId, setSessionId] = useState('');
-    const [username, setUsername] = useState('');
+    const [username, setUsername] = useState('John Doe');
     const [login, setLogin] = useState(false);
     const changeLogin = (data) => {
         setLogin(data);
@@ -20,7 +20,7 @@ const App = () => {
         <div className="app-flex">
         <AppContext.Provider value={{ sessionId, setSessionId, username, setUsername }}>
             {!login
-                ? <div className="app-flex"><Leftbar onlogin={changeLogin} /><Chat /><Rightbar /></div>
+                ? <div className="app-flex"><Leftbar onlogin={changeLogin} user={username} /><Chat /><Rightbar /></div>
                 : <Login onlogin={changeLogin} />
             }
         </AppContext.Provider>
