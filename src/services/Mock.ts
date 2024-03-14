@@ -8,6 +8,14 @@ class MockClient {
   }
 
   async getSession(id?: string, username?: string) {
+      if (id) {
+        return {
+            "session_id": "5c3c04ce538d461d91931112e14c0a37",
+            "username": "yhaviv@gmail.com",
+            "agent_name": null,
+            "history": [ {"role": "AI","content": "Hi, How can I help you today?"}]
+        };
+      }
     return Data;
   }
 
