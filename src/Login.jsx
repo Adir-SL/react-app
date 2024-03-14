@@ -14,11 +14,13 @@ const Login = (props) => {
         <div className='comp-login'>
             <div className="login-flex">
                 <div className="logo"><img src={Logo} /></div>
-                <Input type="text" header="Enter your credentials" content="User Name" placetext="Enter your user name" onChange={() => {setUsername('Adam');}} />
+                <Input type="text" header="Enter your credentials" content="User Name" placetext="Enter your user name" />
                 <Input type="password" content="Password" placetext="Enter your password" />
                 <Button label="Login" onClick={() => {
-                    console.log(username);
-                    props.onlogin(false);
+                    setUsername('Adam');
+                    setTimeout(function(){
+                        props.onlogin(false);
+                    }, 200);
                 }} />
             </div>
         </div>
