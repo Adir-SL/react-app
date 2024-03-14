@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import { useState } from 'react';
 import React from 'react';
 import Header from './components/Header';
@@ -5,16 +6,25 @@ import Header from './components/Header';
 import History from './components/History';
 import Button from './components/Button';
 import "./Leftbar.css";
-import MockClient from './services/Mock.ts';
+import Client from './services/Api.ts';
+import {AppContext, generateSessionId} from "./services/AppContext";
 
-const Mock = new MockClient
-const func = Mock.listSessions
-const arr = await func()
+const func = Client.listSessions
+const arr =  await func()
 
 const Leftbar = (props) => {
+    const {sessionId, setSessionId, username, setUsername} = useContext(AppContext);
+
+    const newChat = async () => {
+        let sid = generateSessionId()
+        setSessionId(sid)
+    }
+
     const changeLoginAgain = (data) => {
         props.onlogin(true);
     }
+
+
     return (
         <div className='comp-leftbar'>
             <Header onloginchange={changeLoginAgain} />
@@ -23,7 +33,7 @@ const Leftbar = (props) => {
                 <History history={arr} />
             </div>
             <div class="footer-flex">
-                <Button label="New chat" />
+                <Button label="New chat" onClick={newChat}/>
             </div>
         </div>
     )

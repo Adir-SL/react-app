@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext} from 'react';
 import React from 'react';
 import "./Chat.css";
 import Bubble from "./components/Bubble";
@@ -6,17 +6,20 @@ import Message from "./components/Message";
 import Search from "./components/Search";
 import Button from "./components/Button";
 import Client from './services/Api'
+import AppContext from "./services/AppContext";
 
 const Chat = (props) => {
     const [messages, setMessages] = useState([]);
+    const { sessionId, setSessionId, username, setUsername } = useContext(AppContext);
 
     useEffect(() => {
         async function fetchData() {
-            const chatSession = await Client.getSession();
+            console.log('getting session:', sessionId)
+            const chatSession = await Client.getSession(sessionId);
             setMessages(chatSession.history);
         }
         fetchData();
-    }, []);
+    }, [sessionId]);
 
     return (
         <div className='comp-chat'>
