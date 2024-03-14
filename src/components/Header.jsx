@@ -20,8 +20,8 @@ const Header = (props) => {
                     </div>
                 </summary>
                 <div className="menu">
+                    <div className="menu-item disabled">{props.user}</div>
                     <div className="menu-item">
-                        {props.user}
                         <div className="menu-icon settings"></div>
                         Settings
                     </div>
