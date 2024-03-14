@@ -16,7 +16,7 @@ const App = () => {
         <div className="app-flex">
             {!login
                 ? <div className="app-flex"><Leftbar onlogin={changeLogin} /><Chat /><Rightbar /></div>
-                : <Login />
+                : <Login onlogin={changeLogin} />
             }
         </div>
     );

@@ -4,7 +4,6 @@ import "./Header.css";
 import Logo from "./../assets/mlrun.png";
 
 const Header = (props) => {
-    // const [login, setLogin] = useState(false);
     return (
         <div className='comp-header'>
             <div className="logo"><img src={Logo} /></div>

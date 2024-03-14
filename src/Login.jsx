@@ -10,9 +10,9 @@ const Login = (props) => {
         <div className='comp-login'>
             <div className="login-flex">
                 <div className="logo"><img src={Logo} /></div>
-                <Input header="Enter your credentials" placetext="User Name" />
-                <Input placetext="Password" />
-                <Button label="Login" />
+                <Input header="Enter your credentials" content="User Name" placetext="Enter your user name" />
+                <Input content="Password" placetext="Enter your password" />
+                <Button label="Login" onClick={() => {props.onlogin(false)}} />
             </div>
         </div>
     )
