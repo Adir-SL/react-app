@@ -4,18 +4,23 @@ import "./History.css";
 
 const History = (props) => {
     const histories = props.history;
+    
     return (
         <div className='comp-history'>
 
             <div className="inner-flex">
                 {histories.map((history) => (
-                    <button>
+                    <button onClick={() => console.log(history.session_id)}>
                         {history.topic}
                         <details>
                             <summary>
                                 <div className="icon-button"></div>
                             </summary>
                             <div className="menu">
+                            <div className="menu-item">
+                                    <div className="menu-icon rename"></div>
+                                    Rename
+                                </div>
                                 <div className="menu-item">
                                     <div className="menu-icon pdf"></div>
                                     Export to PDF

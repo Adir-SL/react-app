@@ -24,7 +24,9 @@ const Header = (props) => {
                         <div className="menu-icon settings"></div>
                         Settings
                     </div>
-                    <div className="menu-item">
+                    <div className="menu-item" onClick={() => {
+                        props.onloginchange(true)
+                    }}>
                         <div className="menu-icon logout"></div>
                         Logout
                     </div>

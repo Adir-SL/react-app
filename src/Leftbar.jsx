@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { useState } from 'react';
 import React from 'react';
 import Header from './components/Header';
 // import Search from './Search';
@@ -19,9 +20,14 @@ const Leftbar = (props) => {
         setSessionId(sid)
     }
 
+    const changeLoginAgain = (data) => {
+        props.onlogin(true);
+    }
+
+
     return (
         <div className='comp-leftbar'>
-            <Header />
+            <Header onloginchange={changeLoginAgain} />
             <div className="inner">
                 {/* <Search /> */}
                 <History history={arr} />

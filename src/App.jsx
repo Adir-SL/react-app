@@ -5,18 +5,24 @@ import Leftbar from "./Leftbar";
 import Rightbar from "./Rightbar";
 import Chat from "./Chat";
 import {AppContext} from "./services/AppContext";
+import Login from "./Login";
 import "./App.css";
 
 const App = () => {
     const [sessionId, setSessionId] = useState('');
     const [username, setUsername] = useState('');
+    const [login, setLogin] = useState(false);
+    const changeLogin = (data) => {
+        setLogin(data);
+    }
 
     return (
         <div className="app-flex">
         <AppContext.Provider value={{ sessionId, setSessionId, username, setUsername }}>
-            <Leftbar />
-            <Chat />
-            <Rightbar />
+            {!login
+                ? <div className="app-flex"><Leftbar onlogin={changeLogin} /><Chat /><Rightbar /></div>
+                : <Login onlogin={changeLogin} />
+            }
         </AppContext.Provider>
         </div>
     );
