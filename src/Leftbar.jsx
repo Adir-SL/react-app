@@ -9,12 +9,15 @@ import MockClient from './services/Mock.ts';
 
 const Mock = new MockClient
 const func = Mock.listSessions
-const arr =  await func()
+const arr = await func()
 
 const Leftbar = (props) => {
+    const changeLoginAgain = (data) => {
+        props.onlogin(true);
+    }
     return (
         <div className='comp-leftbar'>
-            <Header />
+            <Header onloginchange={changeLoginAgain} />
             <div className="inner">
                 {/* <Search /> */}
                 <History history={arr} />
