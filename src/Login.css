@@ -5,12 +5,39 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(180deg, #4b6cb7 0%, #182848 100%);
+}
+
+.comp-login .login-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #DCDFE8;
+    border-radius: 12px;
+    padding: 32px;
+    min-width: 320px;
 }
 
 .comp-login .logo {
+    height: 34px;
+    width: fit-content;
     filter: invert(100%);
+    margin-bottom: 60px;
 }
 
-.comp-login .comp-input{
+.comp-login .logo img {
+    height: 100%;
+}
+
+.comp-login .comp-input {
     margin: 0;
+    width: 100%;
+}
+
+.comp-login button {
+    margin-top: 60px;
+    width: 100%;
+    padding: 12px;
 }
