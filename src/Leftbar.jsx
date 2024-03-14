@@ -27,7 +27,7 @@ const Leftbar = (props) => {
 
     return (
         <div className='comp-leftbar'>
-            <Header onloginchange={changeLoginAgain} />
+            <Header user={props.user} onloginchange={changeLoginAgain} />
             <div className="inner">
                 {/* <Search /> */}
                 <History history={arr} />
