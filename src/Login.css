@@ -1,0 +1,16 @@
+.comp-login {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.comp-login .logo {
+    filter: invert(100%);
+}
+
+.comp-login .comp-input{
+    margin: 0;
+}
