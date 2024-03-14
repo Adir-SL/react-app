@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useContext } from 'react';
 import React from 'react';
 import "./Login.css";
 import Logo from "./assets/mlrun.png";
@@ -7,7 +8,7 @@ import Button from "./components/Button";
 import {AppContext} from "./services/AppContext";
 
 const Login = (props) => {
-    const [username, setUsername] = useState(AppContext);
+    const {sessionId, setSessionId, username, setUsername} = useContext(AppContext);
 
     return (
         <div className='comp-login'>
