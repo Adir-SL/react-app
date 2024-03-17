@@ -33,7 +33,7 @@ const Header = (props) => {
                     </div>
                 </div>
             </details>
-            {/*  */}
+            {/* TODO: limit username with trancation */}
         </div>
     )
 };
