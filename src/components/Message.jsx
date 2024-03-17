@@ -16,7 +16,7 @@ const Message = ({ setter }) => {
             document.getElementsByClassName("help-text")[lastBubble].scrollIntoView(false);
         }, 50);
 
-        setter(prevMessages => [...prevMessages, { role: 'AI', content: '![Thinking](/assets/thinking.gif)', sources: null }]);
+        setter(prevMessages => [...prevMessages, { role: 'AI', content: '<img src="/assets/thinking.gif" alt="thinking"/>', sources: null }]);
         const result = await Client.submitQuery('id', inputValue);
         setter(prevMessages => [
             ...prevMessages.slice(0, -1),

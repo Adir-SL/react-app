@@ -4,7 +4,6 @@ import "./Bubble.css";
 import IconBot from "./IconBot";
 import IconHuman from "./IconHuman";
 import Sources from "./Sources";
-import ReactMarkdown from 'react-markdown'
 
 const Bubble = (props) => {
     return (
@@ -14,8 +13,8 @@ const Bubble = (props) => {
                 : <IconHuman />
             }
             <div className="flex-column">
-                <div className='inner-bubble'>
-                    <ReactMarkdown>{props.content}</ReactMarkdown>
+                <div className='inner-bubble' dangerouslySetInnerHTML={{__html: props.content}}>
+                    
                 </div>
                 {props.bot == 'AI' ? <div className='help-text'>Was this helpful? <button>👍</button><button>👎</button></div> : <div className='help-text'></div>}
 

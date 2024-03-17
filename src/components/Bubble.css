@@ -43,7 +43,7 @@
 }
 .comp-bubble .inner-bubble img{
     border-radius: 6px;
-    margin-top: 12px;
+    margin-top: 2px;
     max-width: 98%;
 }
 .comp-bubble .inner-bubble img[src="/assets/thinking.gif"]{
