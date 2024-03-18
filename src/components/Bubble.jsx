@@ -26,6 +26,11 @@ const Bubble = (props) => {
                 navigator.clipboard.writeText(props.content);
             }}></button>
 
+            {/* TODO: Add Markdown to 'content', also 'html' is a different prop */}
+            {/* TODO: Add Error state to LOGIN */}
+            {/* TODO: new components: graph (like MLRun nodes) */}
+            {/* TODO: new components: table (from json - try to look in npm) (filters, sortings etc.) */}
+
             {/* TODO: Add 'suggest' icon, to open popup w alternative text input */}
         </div>
     )
