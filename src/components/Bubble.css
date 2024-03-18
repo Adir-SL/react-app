@@ -130,6 +130,12 @@
     height: 16px;
 }
 
+.comp-bubble h1, .comp-bubble h2, .comp-bubble h3, .comp-bubble h4, .comp-bubble h5, .comp-bubble h6{
+    margin: 0;
+    margin-bottom: 0.6em;
+    padding: 0;
+}
+
 @media screen and (max-width: 480px) {
     .comp-bubble, .comp-bubble.AI {
         width: calc(100% - 24px);
