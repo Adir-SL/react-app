@@ -71,11 +71,19 @@
     min-width: 132px;
 }
 
-.comp-header .menu .menu-item.disabled{
+.comp-header .menu .menu-item.disabled {
     pointer-events: none;
     font-size: 0.85em;
     font-weight: 700;
     padding: 8px 12px;
+}
+
+.comp-header .menu .username {
+    display: block;
+    width: 132px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .comp-header .menu .menu-item:hover {
