@@ -9,7 +9,7 @@
       },
       {
         "role": "AI",
-        "content": "Maybe this:<br/><br/> <img src='/assets/robot.jpg' alt='Loona toy robot' />"
+        "content": "Maybe this:\n\n ![Loona toy robot](assets/robot.jpg)"
       },
       {
         "role": "Human",
@@ -17,8 +17,8 @@
       },
       {
         "role": "AI",
-        "content": "<h2>Title test</h2> The <b>mobile plans</b> offered include Emirati Freedom plans, <i>New Freedom plans</i>, and Roam Like Home service. Emirati Freedom plans offer unlimited local and international calls, Roam Like Home service, and other lifestyle benefits. New Freedom plans provide unlimited calls to mobile or fixed non-premium numbers in the UAE or selected international countries. The fair usage policy in Roam Like Home includes data and minutes caps.",
-        "html": null,
+        "content": "## Title test\n The *mobile plans* offered include Emirati Freedom plans, **New Freedom plans**, and Roam Like Home service. Emirati Freedom plans offer unlimited local and international calls, Roam Like Home service, and other lifestyle benefits. New Freedom plans provide unlimited calls to mobile or fixed non-premium numbers in the UAE or selected international countries. The fair usage policy in Roam Like Home includes data and minutes caps.",
+        "html": "<br/><h4>HTML image:</h4><img src='/assets/robot.jpg' alt='Loona toy robot' />",
         "sources": [
           {
             "service": "mobile",

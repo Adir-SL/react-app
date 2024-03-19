@@ -34,15 +34,10 @@ body {
     overflow: hidden;
 }
 
-b {
+em, i {
+    font-style: italic;
+}
+
+strong, b {
     font-weight: 700;
-}
-
-em {
-    font-weight: 600;
-    font-style: normal;
-}
-
-strong {
-    font-weight: 500;
 }

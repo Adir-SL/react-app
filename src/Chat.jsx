@@ -42,7 +42,7 @@ const Chat = (props) => {
             <div className="chat-flex">
                 <div className="bubbles-flex">
                     {messages.map((chatHistory) => (
-                        <Bubble content={chatHistory.content} bot={chatHistory.role} source={chatHistory.sources} />
+                        <Bubble content={chatHistory.content} bot={chatHistory.role} source={chatHistory.sources} html={chatHistory.html} />
                     ))}
                 </div>
 

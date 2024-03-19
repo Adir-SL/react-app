@@ -14,7 +14,8 @@
     margin-left: 40px;
     margin-right: 140px;
 }
-.comp-bubble .flex-column{
+
+.comp-bubble .flex-column {
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -38,18 +39,21 @@
     line-height: 150%;
 }
 
-.comp-bubble .inner-bubble p{
+.comp-bubble .inner-bubble p {
     margin: 0;
 }
-.comp-bubble .inner-bubble img{
+
+.comp-bubble .inner-bubble img {
     border-radius: 6px;
     margin-top: 2px;
     max-width: 98%;
 }
-.comp-bubble .inner-bubble img[src="/assets/thinking.gif"]{
+
+.comp-bubble .inner-bubble img[src="/assets/thinking.gif"] {
     height: 25px;
 }
-.comp-bubble .inner-bubble:has(img[src="/assets/thinking.gif"]){
+
+.comp-bubble .inner-bubble:has(img[src="/assets/thinking.gif"]) {
     padding: 22px 32px;
 }
 
@@ -130,14 +134,25 @@
     height: 16px;
 }
 
-.comp-bubble h1, .comp-bubble h2, .comp-bubble h3, .comp-bubble h4, .comp-bubble h5, .comp-bubble h6{
+.comp-bubble h1,
+.comp-bubble h2,
+.comp-bubble h3,
+.comp-bubble h4,
+.comp-bubble h5,
+.comp-bubble h6 {
     margin: 0;
     margin-bottom: 0.6em;
     padding: 0;
 }
 
+.comp-bubble .html-code:empty {
+    display: none;
+}
+
 @media screen and (max-width: 480px) {
-    .comp-bubble, .comp-bubble.AI {
+
+    .comp-bubble,
+    .comp-bubble.AI {
         width: calc(100% - 24px);
         margin-left: 12px;
         margin-right: 12px;
