@@ -37,7 +37,7 @@ const Login = (props) => {
                 ) : (
                     <div></div>
                 )}
-                <Button label="Login" type="submit"
+                <Button label="Login"
                     onClick={() => {
                         submitFunc();
                     }}
