@@ -28,7 +28,6 @@ const Bubble = (props) => {
                 navigator.clipboard.writeText(props.content);
             }}></button>
 
-            {/* TODO: Add Error state to LOGIN */}
             {/* TODO: new components: graph (like MLRun nodes) */}
             {/* TODO: new components: table (from json - try to look in npm) (filters, sortings etc.) */}
 
