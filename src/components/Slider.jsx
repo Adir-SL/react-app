@@ -8,7 +8,7 @@ const Slider = (props) => {
         <div className='comp-slider'>
             <h3>{props.header}</h3>
             <p>{props.content}</p>
-            <div className='tooltip' style={{ left: ((slider - props.min) * (178 / (props.max - props.min))) + "px" }}>{slider}</div>
+            <div className='tooltip' style={{ left: ((slider - props.min) * (160 / (props.max - props.min))) + "px" }}>{slider}</div>
 
             <div className="slider-flex">
                 <input type="range" min={props.min} max={props.max} className="slider" value={slider} onChange={() => setSlider(event.target.value)}></input>
