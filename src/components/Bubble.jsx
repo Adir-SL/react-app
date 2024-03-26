@@ -36,7 +36,6 @@ const Bubble = (props) => {
                 <div className='inner-bubble'>
                     <Markdown>{props.content}</Markdown>
                     <div className='html-code' dangerouslySetInnerHTML={{__html: props.html}}></div>
-                    <div id="myGrid" style="height: 150px; width: 600px" class="ag-theme-quartz"></div>
                 </div>
                 {props.bot == 'AI' ? <div className='help-text'>Was this helpful? <button>👍</button><button>👎</button></div> : <div className='help-text'></div>}
 
