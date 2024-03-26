@@ -5,25 +5,6 @@ import IconBot from "./IconBot";
 import IconHuman from "./IconHuman";
 import Sources from "./Sources";
 import Markdown from 'react-markdown';
-import { createGrid } from 'ag-grid-community';
-
-import 'ag-grid-community/styles/ag-grid.css';
-import 'ag-grid-community/styles/ag-theme-quartz.css';
-
-const gridOptions = {
-	columnDefs: [
-		{ headerName: 'Make', field: 'make' },
-		{ headerName: 'Model', field: 'model' },
-		{ headerName: 'Price', field: 'price' }
-	],
-	rowData: [
-		{ make: 'Toyota', model: 'Celica', price: 35000 },
-		{ make: 'Ford', model: 'Mondeo', price: 32000 },
-		{ make: 'Porsche', model: 'Boxster', price: 72000 }
-	]
-};
-const eGridDiv = document.querySelector('#myGrid');
-const api = createGrid(eGridDiv, gridOptions);
 
 const Bubble = (props) => {
     return (
@@ -35,7 +16,7 @@ const Bubble = (props) => {
             <div className="flex-column">
                 <div className='inner-bubble'>
                     <Markdown>{props.content}</Markdown>
-                    <div className='html-code' dangerouslySetInnerHTML={{__html: props.html}}></div>
+                    <div className='html-code' dangerouslySetInnerHTML={{ __html: props.html }}></div>
                 </div>
                 {props.bot == 'AI' ? <div className='help-text'>Was this helpful? <button>👍</button><button>👎</button></div> : <div className='help-text'></div>}
 

@@ -13,7 +13,14 @@
         "vite": "^3.1.4"
     },
     "dependencies": {
+        "@tanstack/qwik-table": "^8.15.0",
+        "@tanstack/react-table": "^8.15.0",
+        "@tanstack/solid-table": "^8.15.0",
+        "@tanstack/svelte-table": "^8.14.0",
+        "@tanstack/table-core": "^8.14.0",
+        "@tanstack/vue-table": "^8.15.0",
         "ag-grid-community": "^31.2.0",
+        "ag-grid-react": "^31.2.0",
         "axios": "^1.6.7",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",

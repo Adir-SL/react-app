@@ -4,6 +4,7 @@ import { createRoot } from "react-dom/client";
 import Leftbar from "./Leftbar";
 import Rightbar from "./Rightbar";
 import Chat from "./Chat";
+import Table from "./components/Table";
 import {AppContext} from "./services/AppContext";
 import Login from "./Login";
 import "./App.css";
@@ -20,7 +21,7 @@ const App = () => {
         <div className="app-flex">
         <AppContext.Provider value={{ sessionId, setSessionId, username, setUsername }}>
             {!login
-                ? <div className="app-flex"><Leftbar onlogin={changeLogin} user={username} /><Chat /><Rightbar /></div>
+                ? <div className="app-flex"><Leftbar onlogin={changeLogin} user={username} /><Table /><Rightbar /></div>
                 : <Login onlogin={changeLogin} />
             }
         </AppContext.Provider>

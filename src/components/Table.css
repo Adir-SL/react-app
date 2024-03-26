@@ -1,0 +1,9 @@
+.comp-table {
+    width: 100%;
+}
+
+.comp-table .gridTable {
+    margin: 24px;
+    width: calc(100% - 48px);
+    height: calc(100% - 48px) !important;
+}
