@@ -7,3 +7,6 @@
     width: calc(100% - 48px);
     height: calc(100% - 48px) !important;
 }
+.ag-center-cols-container{
+    min-width: 100% !important;
+}
