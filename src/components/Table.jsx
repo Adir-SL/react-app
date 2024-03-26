@@ -19,11 +19,23 @@ const Table = (props) => {
         { field: "price" },
         { field: "electric" }
     ]);
+
+    const autoSizeStrategy = {
+        type: 'fitGridWidth',
+        defaultMinWidth: 100,
+        columnLimits: [
+            {
+                colId: 'country',
+                minWidth: 100
+            }
+        ]
+    };
     return (
         <div className={"comp-table"}>
             <AgGridReact
                 rowData={rowData}
                 columnDefs={colDefs}
+                autoSizeStrategy={autoSizeStrategy}
                 className='gridTable comp-table ag-theme-quartz'
             />
         </div>
