@@ -12,7 +12,6 @@ const Table = (props) => {
         { make: "Toyota", model: "Corolla", price: 29600, electric: false },
     ]);
 
-    // Column Definitions: Defines the columns to be displayed.
     const [colDefs, setColDefs] = useState([
         { field: "make" },
         { field: "model" },

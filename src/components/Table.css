@@ -2,20 +2,13 @@
     width: 100%;
     height: 200px;
 }
-.ag-popup-editor .ag-rich-select-value {
-    min-width: 100px !important;
-  }
-  .ag-filter-menu .ag-set-filter-list {
-    min-width: 100px !important;
-  }
-  [class*=ag-theme-] {
-    --ag-side-bar-panel-width: 100px !important;
-  }
-.comp-table .gridTable {
-    /* margin: 24px;
+
+/* .comp-table .gridTable {
+    margin: 24px;
     width: calc(100% - 48px);
-    height: calc(100% - 48px) !important; */
-}
-.comp-table .ag-center-cols-container{
+    height: calc(100% - 48px) !important;
+} */
+
+.comp-table .ag-center-cols-container {
     min-width: 100% !important;
 }

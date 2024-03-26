@@ -4,7 +4,6 @@ import { createRoot } from "react-dom/client";
 import Leftbar from "./Leftbar";
 import Rightbar from "./Rightbar";
 import Chat from "./Chat";
-import Table from "./components/Table";
 import {AppContext} from "./services/AppContext";
 import Login from "./Login";
 import "./App.css";

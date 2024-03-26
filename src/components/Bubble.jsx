@@ -29,7 +29,6 @@ const Bubble = (props) => {
             }}></button>
 
             {/* TODO: new components: graph (like MLRun nodes) */}
-            {/* TODO: new components: table (from json - try to look in npm) (filters, sortings etc.) */}
 
             {/* TODO: Add 'suggest' icon, to open popup w alternative text input */}
         </div>
