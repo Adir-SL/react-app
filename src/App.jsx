@@ -21,7 +21,7 @@ const App = () => {
         <div className="app-flex">
         <AppContext.Provider value={{ sessionId, setSessionId, username, setUsername }}>
             {!login
-                ? <div className="app-flex"><Leftbar onlogin={changeLogin} user={username} /><Table /><Rightbar /></div>
+                ? <div className="app-flex"><Leftbar onlogin={changeLogin} user={username} /><Chat /><Rightbar /></div>
                 : <Login onlogin={changeLogin} />
             }
         </AppContext.Provider>
