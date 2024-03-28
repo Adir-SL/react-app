@@ -1,4 +1,4 @@
-import { useStatem, useContext } from 'react';
+import { useState, useContext } from 'react';
 import React from 'react';
 import "./Header.css";
 import Logo from "./../assets/mlrun.png";
@@ -6,7 +6,7 @@ import { AppContext } from "../services/AppContext";
 
 const Header = (props) => {
     const {admin, setAdmin} = useContext(AppContext);
-    
+
     return (
         <div className='comp-header'>
                 <div className="logo" onClick={() => setAdmin(true)}>
