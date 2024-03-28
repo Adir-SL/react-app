@@ -1,0 +1,14 @@
+.comp-table {
+    width: 100%;
+    height: 200px;
+}
+
+/* .comp-table .gridTable {
+    margin: 24px;
+    width: calc(100% - 48px);
+    height: calc(100% - 48px) !important;
+} */
+
+.comp-table .ag-center-cols-container {
+    min-width: 100% !important;
+}

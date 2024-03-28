@@ -6,6 +6,7 @@ import Rightbar from "./Rightbar";
 import Chat from "./Chat";
 import { AppContext } from "./services/AppContext";
 import Login from "./Login";
+import Admin from "./admin/Admin";
 import "./App.css";
 
 const App = () => {
@@ -25,7 +26,7 @@ const App = () => {
                         ? <div className="app-flex"><Leftbar onlogin={changeLogin} user={username} /><Chat /><Rightbar /></div>
                         :
                         <div className="app-flex">
-                            ADMIN
+                            <Admin />
                         </div>
 
                     : <Login onlogin={changeLogin} />
