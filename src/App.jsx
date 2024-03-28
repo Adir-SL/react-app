@@ -4,13 +4,14 @@ import { createRoot } from "react-dom/client";
 import Leftbar from "./Leftbar";
 import Rightbar from "./Rightbar";
 import Chat from "./Chat";
-import {AppContext} from "./services/AppContext";
+import { AppContext } from "./services/AppContext";
 import Login from "./Login";
 import "./App.css";
 
 const App = () => {
     const [sessionId, setSessionId] = useState('');
     const [username, setUsername] = useState('John Doe');
+    const [admin, setAdmin] = useState(false);
     const [login, setLogin] = useState(false);
     const changeLogin = (data) => {
         setLogin(data);
@@ -18,12 +19,16 @@ const App = () => {
 
     return (
         <div className="app-flex">
-        <AppContext.Provider value={{ sessionId, setSessionId, username, setUsername }}>
-            {!login
-                ? <div className="app-flex"><Leftbar onlogin={changeLogin} user={username} /><Chat /><Rightbar /></div>
-                : <Login onlogin={changeLogin} />
-            }
-        </AppContext.Provider>
+            <AppContext.Provider value={{ sessionId, setSessionId, username, setUsername, admin, setAdmin }}>
+                {!login
+                    ? !admin
+                        ? <div className="app-flex"><Leftbar onlogin={changeLogin} user={username} /><Chat /><Rightbar /></div>
+                        :
+                        <div>ADMIN</div>
+
+                    : <Login onlogin={changeLogin} />
+                }
+            </AppContext.Provider>
         </div>
     );
 };
