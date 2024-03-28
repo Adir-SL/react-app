@@ -5,6 +5,7 @@ import AppContext from "../services/AppContext";
 import Topbar from "./components/Topbar";
 import Sidebar from "./components/Sidebar";
 import Table from "./components/Table";
+import Breadcrumbs from './components/Breadcrumbs';
 
 const Admin = (props) => {
     const { admin, setAdmin } = useContext(AppContext);
@@ -15,6 +16,7 @@ const Admin = (props) => {
             <div className="flex">
                 <Sidebar />
                 <div className="content">
+                    <Breadcrumbs />
                     <Table />
                 </div>
             </div>

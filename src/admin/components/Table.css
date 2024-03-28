@@ -1,13 +1,7 @@
 .comp-table {
     width: 100%;
-    height: calc(100% - 64px);
+    height: calc(100% - 104px);
 }
-
-/* .comp-table .gridTable {
-    margin: 24px;
-    width: calc(100% - 48px);
-    height: calc(100% - 48px) !important;
-} */
 
 .comp-table .ag-center-cols-container {
     min-width: 100% !important;
