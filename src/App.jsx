@@ -24,7 +24,9 @@ const App = () => {
                     ? !admin
                         ? <div className="app-flex"><Leftbar onlogin={changeLogin} user={username} /><Chat /><Rightbar /></div>
                         :
-                        <div>ADMIN</div>
+                        <div className="app-flex">
+                            ADMIN
+                        </div>
 
                     : <Login onlogin={changeLogin} />
                 }

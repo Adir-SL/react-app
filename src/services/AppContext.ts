@@ -9,6 +9,8 @@ interface AppState {
   setSessionId: (id: string) => void;
   username: string;
   setUsername: (username: string) => void;
+  admin: boolean;
+  setAdmin: (admin: boolean) => void;
 }
 
 export const AppContext = createContext<AppState>({
@@ -16,6 +18,8 @@ export const AppContext = createContext<AppState>({
     setSessionId: () => {},
     username: '',
     setUsername: () => {},
+    admin: false,
+    setAdmin: () => {},
     });
 
 export default AppContext;
