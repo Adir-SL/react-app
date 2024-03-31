@@ -4,7 +4,6 @@ import "./Table.css";
 import { AgGridReact } from 'ag-grid-react';
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-quartz.css";
-import Markdown from 'react-markdown';
 
 const Table = (props) => {
     const [rowData, setRowData] = useState([
