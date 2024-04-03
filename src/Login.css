@@ -68,7 +68,7 @@
 }
 
 .toggle {
-    height: 1.5em;
+    height: 1.2em;
     position: relative;
     cursor: pointer;
 }
@@ -77,15 +77,15 @@
     outline: none;
 }
 
-.toggle:focus::after {
+.toggle:focus-visible::after {
     box-shadow: 0 0 0 2px var(--button-bg-color), 0 0 0 4px var(--button-bg-pressed-color);
 }
 
 .toggle::after {
     content: '';
     position: absolute;
-    width: 3em;
-    height: 1.5em;
+    width: 2.4em;
+    height: 1.2em;
     background-color: #ffffff;
     border-radius: 999px;
     box-shadow: 0 0 0 2px var(--button-bg-color);
@@ -95,8 +95,8 @@
 .toggle::before {
     content: '';
     position: absolute;
-    height: calc(1.5em - 4px);
-    width: calc(1.5em - 4px);
+    height: calc(1.2em - 4px);
+    width: calc(1.2em - 4px);
     background-color: var(--button-bg-color);
     border-radius: 999px;
     left: 2px;
@@ -110,11 +110,11 @@
 }
 
 .toggle:checked::before {
-    transform: translateX(1.5em);
+    transform: translateX(1.2em);
     background-color: #ffffff;
 }
 
 .toggle-flex label {
-    margin-left: 32px;
+    margin-left: 20px;
     cursor: pointer;
 }
