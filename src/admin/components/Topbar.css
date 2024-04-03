@@ -10,7 +10,6 @@
 .comp-topbar .logo {
     height: 34px;
     width: fit-content;
-    cursor: pointer;
 }
 
 .comp-topbar .logo img {

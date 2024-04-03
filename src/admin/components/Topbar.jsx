@@ -9,7 +9,7 @@ const Topbar = (props) => {
 
     return (
         <div className='comp-topbar'>
-            <div className="logo" onClick={() => setAdmin(false)}>
+            <div className="logo">
                 <img src={Logo} />
             </div>
             <details>

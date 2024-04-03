@@ -9,7 +9,7 @@ const Header = (props) => {
 
     return (
         <div className='comp-header'>
-                <div className="logo" onClick={() => setAdmin(true)}>
+                <div className="logo">
                     <img src={Logo} />
                 </div>
             <details>

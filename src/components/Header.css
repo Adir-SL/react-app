@@ -9,7 +9,6 @@
 .comp-header .logo {
     height: 34px;
     width: fit-content;
-    cursor: pointer;
 }
 
 .comp-header .logo img {
