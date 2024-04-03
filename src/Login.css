@@ -41,14 +41,14 @@
 }
 
 .comp-login .failed {
-    margin-top: 40px;
+    margin-top: 24px;
     line-height: 1.5;
     width: 100%;
     color: var(--failed-color);
 }
 
 .comp-login button {
-    margin-top: 40px;
+    margin-top: 24px;
     width: 100%;
     padding: 12px;
 }
@@ -62,11 +62,21 @@
     display: flex;
     gap: 8px;
     align-items: center;
+    margin-top: 24px;
 }
 
 .toggle {
     height: 1.5em;
     position: relative;
+    cursor: pointer;
+}
+
+.toggle:focus {
+    outline: none;
+}
+
+.toggle:focus::after {
+    box-shadow: 0 0 0 2px var(--button-bg-color), 0 0 0 4px var(--button-bg-pressed-color);
 }
 
 .toggle::after {
@@ -79,7 +89,8 @@
     box-shadow: 0 0 0 2px var(--button-bg-color);
     transition: all 200ms ease-in-out 0s;
 }
-.toggle::before{
+
+.toggle::before {
     content: '';
     position: absolute;
     height: calc(1.5em - 4px);
@@ -91,13 +102,17 @@
     z-index: 999;
     transition: all 200ms ease-in-out 0s;
 }
-.toggle:checked::after{
+
+.toggle:checked::after {
     background-color: var(--button-bg-color);
 }
-.toggle:checked::before{
+
+.toggle:checked::before {
     transform: translateX(1.5em);
     background-color: #ffffff;
 }
+
 .toggle-flex label {
     margin-left: 32px;
+    cursor: pointer;
 }
