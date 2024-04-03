@@ -26,7 +26,7 @@ const App = () => {
                         ? <div className="app-flex"><Leftbar onlogin={changeLogin} user={username} /><Chat /><Rightbar /></div>
                         :
                         <div className="app-flex">
-                            <Admin />
+                            <Admin onlogin={changeLogin} />
                         </div>
 
                     : <Login onlogin={changeLogin} />
