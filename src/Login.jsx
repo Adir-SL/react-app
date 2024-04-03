@@ -8,6 +8,7 @@ import Button from "./components/Button";
 import { AppContext } from "./services/AppContext";
 
 const Login = (props) => {
+    const { admin, setAdmin } = useContext(AppContext);
     const { sessionId, setSessionId, username, setUsername } = useContext(AppContext);
     const [FailedToLoad, setFailedToLoad] = useState(false);
 
@@ -38,7 +39,7 @@ const Login = (props) => {
                     <div></div>
                 )}
                 <div className='toggle-flex'>
-                    <input type='checkbox' className='toggle' id='mode' />
+                    <input type='checkbox' className='toggle' id='mode' checked={admin} onClick={() => setAdmin(!admin)} />
                     <label for='mode'>Admin mode</label>
                 </div>
                 <Button label="Login"
