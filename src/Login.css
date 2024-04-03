@@ -63,6 +63,8 @@
     gap: 8px;
     align-items: center;
     margin-top: 24px;
+    width: 100%;
+    font-size: 14px;
 }
 
 .toggle {
