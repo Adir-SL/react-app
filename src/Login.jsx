@@ -39,7 +39,7 @@ const Login = (props) => {
                 )}
                 <div className='toggle-flex'>
                     <input type='checkbox' className='toggle' id='mode' />
-                    <label for='mode'>Mode selection</label>
+                    <label for='mode'>Admin mode</label>
                 </div>
                 <Button label="Login"
                     onClick={() => {
