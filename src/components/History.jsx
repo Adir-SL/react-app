@@ -10,8 +10,8 @@ const History = (props) => {
 
             <div className="inner-flex">
                 {histories.map((history) => (
-                    <button onClick={() => console.log(history.session_id)}>
-                        {history.topic}
+                    <button onClick={() => props.onSelect(history.name)}>
+                        {history.description || history.name}
                         <details>
                             <summary>
                                 <div className="icon-button"></div>

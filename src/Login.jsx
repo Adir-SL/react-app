@@ -28,8 +28,8 @@ const Login = (props) => {
 
             <form className="login-flex" onSubmit={e => e.preventDefault()}>
                 <div className="logo"><img src={Logo} /></div>
-                <Input type="text" header="Enter your credentials" content="User Name" placetext="Enter your user name" />
-                <Input type="password" content="Password" placetext="Enter your password" />
+                <Input type="text" header="Enter your credentials" content="User Name" placetext="Enter your user name" value="guest"/>
+                <Input type="password" content="Password" placetext="Enter your password" value="XxYaz12345"/>
                 {FailedToLoad ? (
                     <div className='failed'>
                         Incorrect email or password.<br />

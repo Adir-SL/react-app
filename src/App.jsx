@@ -13,7 +13,7 @@ const App = () => {
     const [sessionId, setSessionId] = useState('');
     const [username, setUsername] = useState('John Doe');
     const [admin, setAdmin] = useState(false);
-    const [login, setLogin] = useState(false);
+    const [login, setLogin] = useState(true);
     const changeLogin = (data) => {
         setLogin(data);
     }

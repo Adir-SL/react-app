@@ -7,7 +7,7 @@ const Input = (props) => {
         <div className='comp-input'>
             <h3>{props.header}</h3>
             <p>{props.content}</p>
-            <input type={props.type} placeholder={props.placetext} />
+            <input type={props.type} placeholder={props.placetext} defaultValue={props.value}/>
         </div>
     )
 };

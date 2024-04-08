@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react';
+import {useContext, useEffect, useState} from 'react';
 import React from 'react';
 import "./Message.css";
 import Button from "./Button"
 import Client from './../services/Api.ts'
+import AppContext from "../services/AppContext";
 
 const Message = ({ setter }) => {
     const [inputValue, setInputValue] = useState('');
+    const { sessionId, setSessionId, username, setUsername, admin, setAdmin } = useContext(AppContext);
 
     const submitMessage = async () => {
         console.log('inputValue:', inputValue);
@@ -16,8 +18,8 @@ const Message = ({ setter }) => {
             document.getElementsByClassName("help-text")[lastBubble].scrollIntoView(false);
         }, 50);
 
-        setter(prevMessages => [...prevMessages, { role: 'AI', content: '<img src="/assets/thinking.gif" alt="thinking"/>', sources: null }]);
-        const result = await Client.submitQuery('id', inputValue);
+        setter(prevMessages => [...prevMessages, { role: 'AI', content: '![Thinking](/assets/thinking.gif)', sources: null }]);
+        const result = await Client.submitQuery(sessionId, inputValue, username);
         setter(prevMessages => [
             ...prevMessages.slice(0, -1),
             { role: 'AI', content: result.answer, sources: result.sources }
