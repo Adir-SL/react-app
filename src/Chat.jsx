@@ -6,17 +6,27 @@ import Message from "./components/Message";
 import Search from "./components/Search";
 import Button from "./components/Button";
 import Client from './services/Api'
-import AppContext from "./services/AppContext";
+import {AppContext, generateSessionId} from "./services/AppContext";
 
 const Chat = (props) => {
     const [messages, setMessages] = useState([]);
-    const { sessionId, setSessionId, username, setUsername } = useContext(AppContext);
+    const { sessionId, setSessionId, username, setUsername, admin, setAdmin } = useContext(AppContext);
 
     useEffect(() => {
         async function fetchData() {
             console.log('getting session:', sessionId)
             const chatSession = await Client.getSession(sessionId);
-            setMessages(chatSession.history);
+            console.log('session resp:', chatSession)
+            if (chatSession) {
+                // if (!sessionId) {
+                //     console.log('setting session id:', chatSession.id)
+                //     setSessionId(chatSession.id);
+                // }
+                setMessages(chatSession.history);
+            } else {
+                setMessages([]);
+                // setSessionId(generateSessionId());
+            }
         }
         fetchData();
     }, [sessionId]);

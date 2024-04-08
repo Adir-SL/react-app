@@ -1,20 +1,9 @@
 import MockClient from './Mock';
-import React from 'react';
+import React, {useContext} from 'react';
 import axios, {AxiosResponse} from "axios";
+import { AppContext } from './AppContext';
 
 let debugMode = true; // Set this to true if you are in debug mode
-
-
-interface AppState {
-  sessionId: string;
-  setSessionId: (id: string) => void;
-}
-
-// Initialize the context with an empty object
-export const AppContext = React.createContext<AppState>({
-  sessionId: '',
-  setSessionId: () => {},
-});
 
 
 class ApiClient {
@@ -44,14 +33,10 @@ class ApiClient {
     return null;
   }
 
-  async listSessions(last?: number, username?: string) {
+  async listSessions(username?: string, mode?: string, last?: number) {
     try {
       const response = await this.client.get("/sessions", {
-        params: {
-          last: last,
-          username: username,
-        },
-
+        params: {last: last, username: username, mode: mode || 'short'}
       });
       return this.handleResponse(response);
     } catch (error) {
@@ -60,6 +45,7 @@ class ApiClient {
   }
 
   async getSession(id?: string, username?: string) {
+
     try {
       const response = await this.client.get(`/session/${id || '$last'}`, {
         headers: {'x-username': username || 'guest'}
@@ -70,19 +56,19 @@ class ApiClient {
     }
   }
 
-  async submitQuery(id: string, question: string, args?: any) {
+  async submitQuery(id: string, question: string, username?: string, args?: any) {
     try {
-      const response = await this.client.post("/query", {"session_id": id, "question": question});
+      const response = await this.client.post("/pipeline/default/run", {"session_id": id, "question": question}, {
+        headers: {'x-username': username || 'guest'}
+      });
       return this.handleResponse(response);
     } catch (error) {
+      console.error(error.message);
       return this.handleError(error);
     }
   }
 }
 
-// export default new ApiClient();
-
-// todo: add the ApiClient class here
 
 function getClient() {
   if (debugMode) {

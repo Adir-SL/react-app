@@ -1,5 +1,4 @@
-import { useContext } from 'react';
-import { useState } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import React from 'react';
 import Header from './components/Header';
 // import Search from './Search';
@@ -9,20 +8,41 @@ import "./Leftbar.css";
 import Client from './services/Api.ts';
 import {AppContext, generateSessionId} from "./services/AppContext";
 
-const func = Client.listSessions
-const arr =  await func()
-
 const Leftbar = (props) => {
     const {sessionId, setSessionId, username, setUsername} = useContext(AppContext);
+    const [history, setHistory] = useState([]);
 
     const newChat = async () => {
         let sid = generateSessionId()
+        setSessionId(sid)
+        // Fetch sessions after new chat is created
+        await fetchSessions();
+    }
+
+    const selectChat = async (sid) => {
+        console.log('selected chat:', sid)
         setSessionId(sid)
     }
 
     const changeLoginAgain = (data) => {
         props.onlogin(true);
+        fetchSessions();
     }
+
+    const fetchSessions = async () => {
+        try {
+            const sessions = await Client.listSessions(username);
+            setHistory(sessions);
+        } catch (error) {
+            console.error('Failed to fetch sessions:', error);
+        }
+    }
+
+    useEffect(() => {
+        fetchSessions();
+    }, []);
+
+
 
 
     return (
@@ -30,7 +50,7 @@ const Leftbar = (props) => {
             <Header user={props.user} onloginchange={changeLoginAgain} />
             <div className="inner">
                 {/* <Search /> */}
-                <History history={arr} />
+                <History history={history} onSelect={selectChat}/>
             </div>
             <div class="footer-flex">
                 <Button label="New chat" onClick={newChat}/>
