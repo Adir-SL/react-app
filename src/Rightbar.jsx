@@ -10,7 +10,7 @@ import Table from "./components/Table";
 
 const Rightbar = (props) => {
     return (
-        <div className='comp-rightbar open'>
+        <div className='comp-rightbar'>
             <div className="indicator" onClick={() => event.target.parentElement.classList.toggle("open")}></div>
             <div className='title'>Properties</div>
             <div className="inner-elements">
