@@ -1,6 +1,15 @@
 import { useState } from 'react';
 import React from 'react';
 import "./History.css";
+function selectFunc(event) {
+    var x = document.getElementsByClassName("inner-button");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].classList.remove('selected');
+    }
+    event.target.classList.add('selected');
+}
+
 
 const History = (props) => {
     const histories = props.history;
@@ -11,10 +20,12 @@ const History = (props) => {
             <div className="inner-flex">
                 {histories.map((history) => (
                     <button>
-                        <button onClick={() => {
-                            props.onSelect(history.name);
-                            selectFunc(event);
-                        }}
+                        <button
+                            className='inner-button'
+                            onClick={(event) => {
+                                props.onSelect(history.name);
+                                selectFunc(event);
+                            }}
                         >
                             {history.description || history.name}
                         </button>
