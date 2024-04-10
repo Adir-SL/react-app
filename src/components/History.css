@@ -132,6 +132,7 @@
 
 .comp-history .menu-item:has(.delete):hover {
     background-color: rgb(237, 163, 176);
+    color: crimson;
 }
 
 .comp-history .menu-item:has(.delete):active {
