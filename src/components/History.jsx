@@ -13,7 +13,6 @@ const History = (props) => {
                     <button>
                         <button onClick={() => {
                             props.onSelect(history.name)
-                            window.location.hash = (history.description);
                         }}
                         >
                             {history.description || history.name}
