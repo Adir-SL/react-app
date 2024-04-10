@@ -12,7 +12,8 @@ const History = (props) => {
                 {histories.map((history) => (
                     <button>
                         <button onClick={() => {
-                            props.onSelect(history.name)
+                            props.onSelect(history.name);
+                            selectFunc(event);
                         }}
                         >
                             {history.description || history.name}
