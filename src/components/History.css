@@ -34,6 +34,10 @@
     outline: none;
 }
 
+.comp-history button.selected {
+    font-weight: 900;
+}
+
 .comp-history .inner-flex>button:focus-within {
     outline: 1px solid var(--history-hover-color);
     outline-offset: 1px;
