@@ -11,7 +11,11 @@ const History = (props) => {
             <div className="inner-flex">
                 {histories.map((history) => (
                     <button>
-                        <button onClick={() => props.onSelect(history.name)}>
+                        <button onClick={() => {
+                            props.onSelect(history.name)
+                            window.location.hash = (history.description);
+                        }}
+                        >
                             {history.description || history.name}
                         </button>
                         <details>
