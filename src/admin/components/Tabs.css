@@ -24,5 +24,7 @@
     margin-bottom: 12px;
     height: 2px;
     width: 100%;
+    color: transparent;
+    font-size: 0;
     transition: margin-left 300ms ease-in-out 0s, width 300ms ease-in-out 0s;
 }

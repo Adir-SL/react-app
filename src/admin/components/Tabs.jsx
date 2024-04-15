@@ -39,7 +39,9 @@ const Tabs = (props) => {
                 )
 
             ))}
-            <div className="indicator"></div>
+            <div className="indicator">
+                {setTimeout(function () { document.getElementsByClassName("selected")[0].click() }, 50)}
+            </div>
         </div>
     )
 };
