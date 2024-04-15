@@ -6,6 +6,7 @@ import Topbar from "./components/Topbar";
 import Sidebar from "./components/Sidebar";
 import Table from "./components/Table";
 import Breadcrumbs from './components/Breadcrumbs';
+import Tabs from "./components/Tabs";
 
 const Admin = (props) => {
     const { sessionId, setSessionId, username, setUsername } = useContext(AppContext);
@@ -22,6 +23,7 @@ const Admin = (props) => {
                 <Sidebar />
                 <div className="content">
                     <Breadcrumbs />
+                    <Tabs label={["asd", "asdad", "asdad"]} selected="0" />
                     <Table />
                 </div>
             </div>
