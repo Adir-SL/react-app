@@ -11,6 +11,8 @@ const Tabs = (props) => {
             x[i].classList.remove('selected');
         }
         e.target.classList.add('selected');
+        e.target.parentElement.getElementsByClassName("indicator")[0].style.width = e.target.offsetWidth + "px";
+        e.target.parentElement.getElementsByClassName("indicator")[0].style.marginLeft = e.target.offsetLeft - e.target.parentElement.parentElement.offsetLeft + "px";
     }
 
     return (
@@ -37,6 +39,7 @@ const Tabs = (props) => {
                 )
 
             ))}
+            <div className="indicator"></div>
         </div>
     )
 };
