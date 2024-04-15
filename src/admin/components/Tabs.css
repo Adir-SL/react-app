@@ -17,7 +17,6 @@
 
 .comp-tabs .tab.selected {
     color: var(--button-bg-color);
-    /* border-bottom: 2px solid var(--button-bg-color); */
 }
 
 .comp-tabs .indicator {
