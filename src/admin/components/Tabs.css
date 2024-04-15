@@ -1,3 +1,22 @@
-.comp-tabs {
-    color: red;
+.comp-tabs .tab {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+}
+
+.comp-tabs .tab:hover {
+    background-color: var(--rightbar-bg-color);
+}
+
+.comp-tabs .tab:active {
+    background-color: var(--rightbar-input-border-color);
+}
+
+.comp-tabs .tab.selected {
+    color: var(--button-bg-color);
+    border-bottom: 2px solid var(--button-bg-color);
 }

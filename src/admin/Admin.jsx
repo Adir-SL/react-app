@@ -23,7 +23,7 @@ const Admin = (props) => {
                 <Sidebar />
                 <div className="content">
                     <Breadcrumbs />
-                    <Tabs label={["asd", "asdad", "asdad"]} selected="0" />
+                    <Tabs label={["First tab", "Center one", "Last tab"]} selected="0" />
                     <Table />
                 </div>
             </div>
