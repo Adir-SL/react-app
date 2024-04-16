@@ -15,17 +15,16 @@ const Chat = (props) => {
     useEffect(() => {
         async function fetchData() {
             console.log('getting session:', sessionId)
+            if (!sessionId) {
+                setMessages([]);
+                return;
+            }
             const chatSession = await Client.getSession(sessionId);
             console.log('session resp:', chatSession)
             if (chatSession) {
-                // if (!sessionId) {
-                //     console.log('setting session id:', chatSession.id)
-                //     setSessionId(chatSession.id);
-                // }
                 setMessages(chatSession.history);
             } else {
                 setMessages([]);
-                // setSessionId(generateSessionId());
             }
         }
         fetchData();

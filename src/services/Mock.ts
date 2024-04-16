@@ -2,8 +2,11 @@ import Data from '../assets/aa.json';
 
 class MockClient {
 
-  async listSessions(last?: number, username?: string) {
-    return [{ name: "4341dc17e6ee4cc69de24a3f391ac658", description: "Session 1" },
+  async listSessions(username?: string, mode?: string, last?: number) {
+      if (mode === 'names') {
+          return ["5c3c04ce538d461d91931112e14c0a37"]
+      }
+    return [{ name: "5c3c04ce538d461d91931112e14c0a37", description: "Session 1" },
       { name: "30a933a24ded4d2eb893570f2ada2bd1", description: "Session 2" }];
   }
 

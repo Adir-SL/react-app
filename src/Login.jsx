@@ -7,34 +7,32 @@ import Input from "./components/Input";
 import Button from "./components/Button";
 import { AppContext } from "./services/AppContext";
 
-const Login = (props) => {
-    const { admin, setAdmin } = useContext(AppContext);
-    const { sessionId, setSessionId, username, setUsername } = useContext(AppContext);
-    const [FailedToLoad, setFailedToLoad] = useState(false);
 
-    function submitFunc() {
-        setUsername(document.querySelectorAll('input')[0].value);
-        if (document.querySelectorAll('input')[0].value == 'fail') {
-            setFailedToLoad(true);
+const Login = () => {
+    const { sessionId, setSessionId, username, setUsername, admin, setAdmin } = useContext(AppContext);
+    const [LoginError, setLoginError] = useState('');
+    const [formuser, setFormuser] = useState('guest');
+    const [password, setPassword] = useState('XxYaz12345');
+
+    function submitFunc(event) {
+        event.preventDefault();
+        console.log('submitting:', formuser)
+        if (formuser === 'fail') {
+            setLoginError('Incorrect email or password, please enter your sign in information again');
         } else {
-            setTimeout(function () {
-                props.onlogin(false);
-            }, 200);
+            setUsername(formuser);
         }
     }
 
     return (
         <div className='comp-login'>
 
-            <form className="login-flex" onSubmit={e => e.preventDefault()}>
+            <form className="login-flex">
                 <div className="logo"><img src={Logo} /></div>
-                <Input type="text" header="Enter your credentials" content="User Name" placetext="Enter your user name" value="guest"/>
-                <Input type="password" content="Password" placetext="Enter your password" value="XxYaz12345"/>
-                {FailedToLoad ? (
-                    <div className='failed'>
-                        Incorrect email or password.<br />
-                        Enter your sign in information again
-                    </div>
+                <Input type="text" header="Enter your credentials" content="User Name" placetext="Enter your user name" value={formuser} onChange={e => {setFormuser(e.target.value)}}/>
+                <Input type="password" content="Password" placetext="Enter your password" value={password} onChange={e => setPassword(e.target.value)}/>
+                {LoginError ? (
+                    <div className='failed'>{LoginError}</div>
                 ) : (
                     <div></div>
                 )}
@@ -42,11 +40,7 @@ const Login = (props) => {
                     <input type='checkbox' className='toggle' id='mode' checked={admin} onClick={() => setAdmin(!admin)} />
                     <label for='mode'>Admin mode</label>
                 </div>
-                <Button label="Login"
-                    onClick={() => {
-                        submitFunc();
-                    }}
-                />
+                <Button label="Login" onClick={submitFunc} type="submit"/>
             </form>
         </div>
     )
