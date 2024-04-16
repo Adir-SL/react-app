@@ -1,7 +1,7 @@
 import MockClient from './Mock';
 import axios, {AxiosResponse} from "axios";
 
-let debugMode = false; // Set this to true if you are in debug mode
+let debugMode = true; // Set this to true if you are in debug mode
 
 
 class ApiClient {

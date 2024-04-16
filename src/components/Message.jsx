@@ -52,8 +52,6 @@ const Message = ({ setter }) => {
     )
 };
 
-// TODO: add a 'selected' state for chats in Leftbar
-// TODO: add to table a drildown state
 // TODO: Add admin pages for Leftbar categories + selected
 // TODO: Add graphs for an option for a drilldown screen
 // TODO: Tabs component for table/ pages/ whatever
