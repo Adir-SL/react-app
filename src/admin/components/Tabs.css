@@ -20,11 +20,13 @@
 }
 
 .comp-tabs .indicator {
+    --transTime: 0s;
     background-color: var(--button-bg-color);
     margin-bottom: 12px;
     height: 2px;
     width: 100%;
     color: transparent;
     font-size: 0;
-    transition: margin-left 300ms ease-in-out 0s, width 300ms ease-in-out 0s;
+    transition: margin-left var(--transTime) ease-in-out 0s, width var(--transTime) ease-in-out 0s;
+    animation: delayTransitions 0s linear forwards 500ms;
 }

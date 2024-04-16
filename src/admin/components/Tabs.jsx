@@ -13,6 +13,7 @@ const Tabs = (props) => {
         e.target.classList.add('selected');
         e.target.parentElement.getElementsByClassName("indicator")[0].style.width = e.target.offsetWidth + "px";
         e.target.parentElement.getElementsByClassName("indicator")[0].style.marginLeft = e.target.offsetLeft - e.target.parentElement.parentElement.offsetLeft + "px";
+        e.target.parentElement.getElementsByClassName("indicator")[0].style.setProperty("--transTime", "300ms");
     }
 
     return (
@@ -40,7 +41,9 @@ const Tabs = (props) => {
 
             ))}
             <div className="indicator">
-                {setTimeout(function () { document.getElementsByClassName("selected")[0].click() }, 50)}
+                {setTimeout(function () {
+                    document.getElementsByClassName("selected")[0].click();
+                }, 50)}
             </div>
         </div>
     )
