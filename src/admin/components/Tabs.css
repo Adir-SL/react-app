@@ -28,8 +28,23 @@
     color: transparent;
     font-size: 0;
     transition: margin-left var(--transTime) ease-in-out 0s, width var(--transTime) ease-in-out 0s;
-    animation: delayTransitions 0s linear forwards 500ms;
+    animation: delayColor 100ms linear forwards;
 }
-.indicator img{
+
+.indicator img {
     display: none;
+}
+
+@keyframes delayColor {
+    0% {
+        background-color: transparent;
+    }
+
+    99% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: var(--button-bg-color);
+    }
 }
