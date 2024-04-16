@@ -17,7 +17,6 @@ const Tabs = (props) => {
     }
 
     function clickTab(e) {
-        // document.getElementsByClassName("selected")[0].click();
         e.target.parentElement.parentElement.getElementsByClassName("selected")[0].click();
         console.log(e.target.parentElement.parentElement)
     }
@@ -28,6 +27,7 @@ const Tabs = (props) => {
                 index == props.selected ? (
                     <button
                         className={'tab selected'}
+                        key={index}
                         onClick={(event) => {
                             tabSelect(event);
                         }}
@@ -37,6 +37,7 @@ const Tabs = (props) => {
                 ) : (
                     <button
                         className={'tab'}
+                        key={index}
                         onClick={(event) => {
                             tabSelect(event);
                         }}

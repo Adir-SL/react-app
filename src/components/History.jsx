@@ -1,7 +1,7 @@
-import {useContext, useState, useEffect} from 'react';
+import { useContext, useState, useEffect } from 'react';
 import React from 'react';
 import "./History.css";
-import {AppContext} from "../services/AppContext";
+import { AppContext } from "../services/AppContext";
 
 function selectFunc(sid) {
     var x = document.getElementsByClassName("inner-button");
@@ -17,7 +17,7 @@ function selectFunc(sid) {
 
 
 const History = (props) => {
-    const {sessionId, setSessionId} = useContext(AppContext);
+    const { sessionId, setSessionId } = useContext(AppContext);
     const histories = props.history;
 
     const selectChat = (sid) => {
@@ -39,8 +39,8 @@ const History = (props) => {
         <div className='comp-history'>
 
             <div className="inner-flex">
-                {histories.map((history) => (
-                    <button>
+                {histories.map((history, index) => (
+                    <button key={index}>
                         <button
                             className='inner-button'
                             id={`chat-${history.name}`}
