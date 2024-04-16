@@ -1,6 +1,6 @@
 .comp-table {
     width: 100%;
-    height: calc(100% - 144px);
+    flex-grow: 1;
 }
 
 .comp-table .ag-center-cols-container {
@@ -12,6 +12,7 @@
     color: var(--link-text-color);
     font-weight: 600;
 }
-.comp-table a:hover{
+
+.comp-table a:hover {
     text-decoration: underline;
 }
