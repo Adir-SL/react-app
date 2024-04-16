@@ -16,6 +16,12 @@ const Tabs = (props) => {
         e.target.parentElement.getElementsByClassName("indicator")[0].style.setProperty("--transTime", "300ms");
     }
 
+    function clickTab(e) {
+        // document.getElementsByClassName("selected")[0].click();
+        e.target.parentElement.parentElement.getElementsByClassName("selected")[0].click();
+        console.log(e.target.parentElement.parentElement)
+    }
+
     return (
         <div className={"comp-tabs"}>
             {labels.map((label, index) => (
@@ -41,9 +47,16 @@ const Tabs = (props) => {
 
             ))}
             <div className="indicator">
-                {setTimeout(function () {
-                    document.getElementsByClassName("selected")[0].click();
-                }, 50)}
+                <img src=""
+                    onError={(event) => {
+                        setTimeout(function () {
+                            clickTab(event);
+                        }, 50)
+                    }}
+                />
+                {/* {setTimeout(function () {
+                    clickTab(event);
+                }, 50)} */}
             </div>
         </div>
     )

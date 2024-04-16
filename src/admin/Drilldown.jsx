@@ -10,7 +10,7 @@ const Drilldown = () => {
     return (
         <div className='comp-drilldown'>
             <div className="content">
-                <Breadcrumbs />
+                {/* <Breadcrumbs /> */}
                 <Tabs label={["First tab", "Second one", "Center one", "Forth forth", "Last tab"]} selected="0" />
                 <Table />
             </div>
