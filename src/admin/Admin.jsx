@@ -23,7 +23,7 @@ const Admin = (props) => {
                 <Sidebar />
                 <div className="content">
                     <Breadcrumbs />
-                    {/* <Tabs label={["First tab", "Second one", "Center one", "Forth forth", "Last tab"]} selected="0" /> */}
+                    <Tabs label={["First tab", "Second one", "Center one", "Forth forth", "Last tab"]} selected="0" />
                     <Table data={[
                         { name: <a href="admin/drilldown.html" target="drill">David</a>, created: "6 October 2016", updated: "6 October 2016", tags: "Complaint", resolved: true },
                         { name: <a href="admin/drilldown.html" target="drill">Michael</a>, created: "2 January 2018", updated: "2 January 2018", tags: "Complaint", resolved: true },
