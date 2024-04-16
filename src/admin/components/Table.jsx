@@ -32,32 +32,41 @@ const Table = (props) => {
     };
 
     function addLinks() {
-        console.log('yasdasydfy')
-
         setTimeout(function () {
             var x = document.getElementsByTagName("a");
             var i;
             for (i = 0; i < x.length; i++) {
-                x[i].addEventListener("click", function () { document.getElementById("drillFrame").classList.add('shown') });
+                x[i].addEventListener("click", linkClick);
             }
         }, 100);
+    }
+
+    function linkClick() {
+        var x = document.getElementsByTagName("a");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].parentElement.parentElement.style.backgroundColor = "transparent";
+            }
+
+        document.getElementById("drillFrame").classList.add('shown');
+        this.parentElement.parentElement.style.backgroundColor = "#DCDFE8";
     }
 
 
     return (
         <div className={"comp-table"}>
             <div className="drilldown" id="drillFrame">
-            <button className='close-button'
-                onClick={() => {
-                    document.getElementById("drillFrame").classList.remove('shown');
-                }}
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>
+                <button className='close-button'
+                    onClick={() => {
+                        document.getElementById("drillFrame").classList.remove('shown');
+                    }}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
 
-            </button>
-            <iframe name="drill"></iframe>
+                </button>
+                <iframe name="drill"></iframe>
             </div>
             <AgGridReact
                 rowData={rowData}
