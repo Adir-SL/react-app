@@ -7,7 +7,7 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
 
 const Table = (props) => {
     const [rowData, setRowData] = useState([
-        { name: <a href="drilldown.html" target="drill">David</a>, created: "6 October 2016", updated: "6 October 2016", tags: "Complaint", resolved: true },
+        { name: <a href="admin/drilldown.html" target="drill">David</a>, created: "6 October 2016", updated: "6 October 2016", tags: "Complaint", resolved: true },
         { name: "Michael", created: "2 January 2018", updated: "2 January 2018", tags: "Complaint", resolved: true },
         { name: "Kate", created: "28 February 2020", updated: "28 February 2020", tags: "Support", resolved: false },
         { name: "Barry", created: "14 May 2020", updated: "14 May 2020", tags: "Support", resolved: false },
