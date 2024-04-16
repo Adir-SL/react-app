@@ -6,3 +6,12 @@
 .comp-table .ag-center-cols-container {
     min-width: 100% !important;
 }
+
+.comp-table a {
+    text-decoration: none;
+    color: var(--link-text-color);
+    font-weight: 600;
+}
+.comp-table a:hover{
+    text-decoration: underline;
+}
