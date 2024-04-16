@@ -42,14 +42,18 @@ const Table = (props) => {
     }
 
     function linkClick() {
-        var x = document.getElementsByTagName("a");
-            var i;
-            for (i = 0; i < x.length; i++) {
-                x[i].parentElement.parentElement.style.backgroundColor = "transparent";
-            }
+        resetLinks();
 
         document.getElementById("drillFrame").classList.add('shown');
         this.parentElement.parentElement.style.backgroundColor = "#eef5ff";
+    }
+
+    function resetLinks() {
+        var x = document.getElementsByTagName("a");
+        var i;
+        for (i = 0; i < x.length; i++) {
+            x[i].parentElement.parentElement.style.backgroundColor = "transparent";
+        }
     }
 
 
@@ -58,6 +62,7 @@ const Table = (props) => {
             <div className="drilldown" id="drillFrame">
                 <button className='close-button'
                     onClick={() => {
+                        resetLinks();
                         document.getElementById("drillFrame").classList.remove('shown');
                     }}
                 >
