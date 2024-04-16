@@ -1,9 +1,7 @@
 import MockClient from './Mock';
-import React, {useContext} from 'react';
 import axios, {AxiosResponse} from "axios";
-import { AppContext } from './AppContext';
 
-let debugMode = true; // Set this to true if you are in debug mode
+let debugMode = false; // Set this to true if you are in debug mode
 
 
 class ApiClient {
@@ -11,7 +9,7 @@ class ApiClient {
 
   constructor() {
     this.client = axios.create({
-      baseURL: "http://localhost:8000/api",
+      baseURL: "/api",
       headers: {
         "Content-Type": "application/json",
       },

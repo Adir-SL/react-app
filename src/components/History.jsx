@@ -1,18 +1,39 @@
-import { useState } from 'react';
+import {useContext, useState, useEffect} from 'react';
 import React from 'react';
 import "./History.css";
-function selectFunc(event) {
+import {AppContext} from "../services/AppContext";
+
+function selectFunc(sid) {
     var x = document.getElementsByClassName("inner-button");
     var i;
     for (i = 0; i < x.length; i++) {
         x[i].classList.remove('selected');
     }
-    event.target.classList.add('selected');
+    var element = document.getElementById(`chat-${sid}`);
+    if (element) {
+        element.classList.add('selected');
+    }
 }
 
 
 const History = (props) => {
+    const {sessionId, setSessionId} = useContext(AppContext);
     const histories = props.history;
+
+    const selectChat = (sid) => {
+        console.log('selected chat:', sid, sessionId)
+        if (sid === sessionId) {
+            return;
+        }
+        selectFunc(sid)
+        props.setNew(false)
+        setSessionId(sid)
+    }
+
+
+    useEffect(() => {
+        selectFunc(sessionId);
+    });
 
     return (
         <div className='comp-history'>
@@ -22,9 +43,9 @@ const History = (props) => {
                     <button>
                         <button
                             className='inner-button'
+                            id={`chat-${history.name}`}
                             onClick={(event) => {
-                                props.onSelect(history.name);
-                                selectFunc(event);
+                                selectChat(history.name);
                             }}
                         >
                             {history.description || history.name}

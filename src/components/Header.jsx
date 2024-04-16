@@ -31,7 +31,7 @@ const Header = (props) => {
                         Settings
                     </div>
                     <div className="menu-item" onClick={() => {
-                        props.onloginchange(true)
+                        props.onlogout()
                     }}>
                         <div className="menu-icon logout"></div>
                         Logout
