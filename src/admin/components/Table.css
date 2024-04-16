@@ -28,7 +28,7 @@
     border: none;
     z-index: 9;
     box-sizing: border-box;
-    border: 1px solid black;
+    border: 1px solid color-mix(in srgb, transparent, #181d1f 15%);
     display: none;
 }
 
