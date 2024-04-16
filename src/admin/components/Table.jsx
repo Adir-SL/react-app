@@ -49,7 +49,7 @@ const Table = (props) => {
             }
 
         document.getElementById("drillFrame").classList.add('shown');
-        this.parentElement.parentElement.style.backgroundColor = "#DCDFE8";
+        this.parentElement.parentElement.style.backgroundColor = "#eef5ff";
     }
 
 
