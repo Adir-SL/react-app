@@ -7,7 +7,7 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
 
 const Table = (props) => {
     const [rowData, setRowData] = useState([
-        { name: "David", created: "6 October 2016", updated: "6 October 2016", tags: "Complaint", resolved: true },
+        { name: <a href="drilldown.html">David</a>, created: "6 October 2016", updated: "6 October 2016", tags: "Complaint", resolved: true },
         { name: "Michael", created: "2 January 2018", updated: "2 January 2018", tags: "Complaint", resolved: true },
         { name: "Kate", created: "28 February 2020", updated: "28 February 2020", tags: "Support", resolved: false },
         { name: "Barry", created: "14 May 2020", updated: "14 May 2020", tags: "Support", resolved: false },
@@ -29,14 +29,18 @@ const Table = (props) => {
         { name: "Rafi", created: "19 June 2023", updated: "19 June 2023", tags: "Support", resolved: true },
     ]);
 
+    function codeRender(params) {
+        const link = params.value;
+        return params.value
+    }
+
     const [colDefs, setColDefs] = useState([
-        { field: "name" },
+        { field: "name", cellRenderer: codeRender, },
         { field: "created" },
         { field: "updated" },
         { field: "tags" },
         { field: "resolved" }
     ]);
-
     const autoSizeStrategy = {
         type: 'fitGridWidth',
         defaultMinWidth: 100,
