@@ -18,8 +18,9 @@
     text-decoration: underline;
 }
 
-.comp-table .drilldown{
+.comp-table .drilldown {
     position: absolute;
+    background-color: #ffffff;
     width: calc(80%);
     height: 100%;
     right: 0;
@@ -28,4 +29,9 @@
     z-index: 9;
     box-sizing: border-box;
     border: 1px solid black;
+    display: none;
+}
+
+.comp-table .drilldown.shown {
+    display: block;
 }

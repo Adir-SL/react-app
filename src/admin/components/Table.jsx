@@ -51,15 +51,30 @@ const Table = (props) => {
             }
         ]
     };
+
+    function addLinks() {
+        console.log('yasdasydfy')
+
+        setTimeout(function () {
+            var x = document.getElementsByTagName("a");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].addEventListener("click", function () { document.getElementById("drillFrame").classList.add('shown') });
+            }
+        }, 100);
+    }
+
+
     return (
         <div className={"comp-table"}>
-            <iframe className="drilldown" name="drill"></iframe>
+            <iframe className="drilldown" name="drill" id="drillFrame"></iframe>
             <AgGridReact
                 rowData={rowData}
                 columnDefs={colDefs}
                 autoSizeStrategy={autoSizeStrategy}
                 className='gridTable comp-table ag-theme-quartz'
             />
+            {addLinks()}
         </div>
     )
 };
