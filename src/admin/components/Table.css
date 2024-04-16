@@ -1,6 +1,7 @@
 .comp-table {
     width: 100%;
     flex-grow: 1;
+    position: relative;
 }
 
 .comp-table .ag-center-cols-container {
@@ -15,4 +16,16 @@
 
 .comp-table a:hover {
     text-decoration: underline;
+}
+
+.comp-table .drilldown{
+    position: absolute;
+    width: calc(80%);
+    height: 100%;
+    right: 0;
+    border-radius: 0 8px 8px 0;
+    border: none;
+    opacity: 0.8;
+    background-color: lightgray;
+    z-index: 9;
 }
