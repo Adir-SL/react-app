@@ -28,9 +28,11 @@ const Bubble = (props) => {
                 navigator.clipboard.writeText(props.content);
             }}></button>
 
+            {/* TODO: Microphone should kinda work, make it a toggle of 2 colors */}
             {/* TODO: new components: graph (like MLRun nodes) */}
-
             {/* TODO: Add 'suggest' icon, to open popup w alternative text input */}
+            {/* TODO: Add a dropdown to login w name+description (of different apps) */}
+            {/* TODO: Add a Modal component for Delete an session  */}
         </div>
     )
 };
