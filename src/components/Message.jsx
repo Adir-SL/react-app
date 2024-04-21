@@ -1,4 +1,4 @@
-import {useContext, useEffect, useState} from 'react';
+import { useContext, useEffect, useState } from 'react';
 import React from 'react';
 import "./Message.css";
 import Button from "./Button"
@@ -45,7 +45,7 @@ const Message = ({ setter }) => {
                     onChange={e => setInputValue(e.target.value)}
                     onKeyPress={handleKeyPress}
                 />
-                <div className="icon-button mic-icon"></div>
+                <div className="icon-button mic-icon" onClick={(event) => { event.target.classList.toggle('selected') }}></div>
                 <Button label="Send" onClick={submitMessage} />
             </div>
         </div>
