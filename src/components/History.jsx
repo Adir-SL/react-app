@@ -70,7 +70,7 @@ const History = (props) => {
                                     <div className="menu-icon archive"></div>
                                     Archive
                                 </div>
-                                <div className="menu-item">
+                                <div className="menu-item" onClick={() => { setModal(true) }}>
                                     <div className="menu-icon delete"></div>
                                     Delete
                                 </div>
@@ -79,7 +79,7 @@ const History = (props) => {
                     </button>
                 ))}
             </div>
-            {/* <Modal title="Head title" content="Lorem ipsum" /> */}
+            {modal && <Modal title="Head title" content="Lorem ipsum" />}
         </div>
     )
 };
