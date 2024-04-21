@@ -32,7 +32,7 @@ const Bubble = (props) => {
             {/* [ ] TODO: new components: graph (like MLRun nodes) */}
             {/* [ ] TODO: Add 'suggest' icon, to open popup w alternative text input */}
             {/* [ ] TODO: Add a dropdown to login w name+description (of different apps) */}
-            {/* [ ] TODO: Add a Modal component for Delete an session  */}
+            {/* [X] TODO: Add a Modal component for Delete an session  */}
         </div>
     )
 };

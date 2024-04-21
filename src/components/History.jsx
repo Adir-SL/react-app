@@ -47,6 +47,9 @@ const History = (props) => {
                         <button
                             className='inner-button'
                             id={`chat-${history.name}`}
+                            onMouseOver={(e) => {
+                                window.historyTemp = e.target;
+                            }}
                             onClick={(event) => {
                                 selectChat(history.name);
                             }}
@@ -79,7 +82,7 @@ const History = (props) => {
                     </button>
                 ))}
             </div>
-            {modal && <Modal title="Head title" content="Lorem ipsum" mainFunc={() => { alert('yes') }} />}
+            {modal && <Modal title="Delete session" content="This will delete the selected session forever and it cannot be undone." mainFunc={() => { window.historyTemp.parentElement.outerHTML = ''; setModal(false); }} />}
         </div>
     )
 };

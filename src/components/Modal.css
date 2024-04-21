@@ -19,6 +19,7 @@
     color: var(--leftbar-bg-color);
     margin: 0;
     padding: 32px;
+    max-width: 320px;
     background-color: #ffffff;
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -28,11 +29,15 @@
     padding: 0;
     margin: 0;
 }
+.comp-modal .modal p{
+    line-height: 150%;
+}
 
 .comp-modal .modal footer {
     display: flex;
     gap: 8px;
     margin-top: 32px;
+    justify-content: flex-end;
 }
 
 .comp-modal .modal footer button {
