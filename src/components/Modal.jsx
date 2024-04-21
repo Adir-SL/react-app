@@ -12,7 +12,7 @@ const Modal = (props) => {
                 <p>{props.content}</p>
                 <footer>
                     <button className='second-button' onClick={() => { setModal(false) }}>Cancel</button>
-                    <button>OK</button>
+                    <button onClick={props.mainFunc}>OK</button>
                 </footer>
             </div>
         </div>

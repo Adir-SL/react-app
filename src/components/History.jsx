@@ -79,7 +79,7 @@ const History = (props) => {
                     </button>
                 ))}
             </div>
-            {modal && <Modal title="Head title" content="Lorem ipsum" />}
+            {modal && <Modal title="Head title" content="Lorem ipsum" mainFunc={() => { alert('yes') }} />}
         </div>
     )
 };
