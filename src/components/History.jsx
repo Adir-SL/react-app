@@ -1,6 +1,7 @@
 import { useContext, useState, useEffect } from 'react';
 import React from 'react';
 import "./History.css";
+import Modal from "./Modal";
 import { AppContext } from "../services/AppContext";
 
 function selectFunc(sid) {
@@ -19,8 +20,10 @@ function selectFunc(sid) {
 const History = (props) => {
     const { sessionId, setSessionId } = useContext(AppContext);
     const histories = props.history;
+    const { modal, setModal } = useContext(AppContext);
 
     const selectChat = (sid) => {
+        console.log('MODAL: ', modal);
         console.log('selected chat:', sid, sessionId)
         if (sid === sessionId) {
             return;
@@ -76,6 +79,7 @@ const History = (props) => {
                     </button>
                 ))}
             </div>
+            {/* <Modal title="Head title" content="Lorem ipsum" /> */}
         </div>
     )
 };

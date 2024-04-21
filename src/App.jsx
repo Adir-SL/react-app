@@ -14,10 +14,11 @@ const App = () => {
     const [sessionId, setSessionId] = useState('');
     const [username, setUsername] = useState('');
     const [admin, setAdmin] = useState(false);
+    const [modal, setModal] = useState(false);
 
     return (
         <div className="app-flex">
-            <AppContext.Provider value={{ sessionId, setSessionId, username, setUsername, admin, setAdmin }}>
+            <AppContext.Provider value={{ sessionId, setSessionId, username, setUsername, admin, setAdmin, modal, setModal }}>
                 {username
                     ? !admin
                         ? <div className="app-flex"><Leftbar/><Chat /><Rightbar /></div>

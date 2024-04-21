@@ -11,16 +11,20 @@ interface AppState {
   setUsername: (username: string) => void;
   admin: boolean;
   setAdmin: (admin: boolean) => void;
+  modal: boolean;
+  setModal: (modal: boolean) => void;
 }
 
 export const AppContext = createContext<AppState>({
-    sessionId: '',
-    setSessionId: () => {},
-    username: '',
-    setUsername: () => {},
-    admin: false,
-    setAdmin: () => {},
-    });
+  sessionId: '',
+  setSessionId: () => { },
+  username: '',
+  setUsername: () => { },
+  modal: false,
+  setModal: () => { },
+  admin: false,
+  setAdmin: () => { },
+});
 
 export default AppContext;
 export { generateSessionId };
