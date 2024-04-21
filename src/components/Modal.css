@@ -1,4 +1,4 @@
-.comp-modal{
+.comp-modal {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -9,6 +9,7 @@
     z-index: 9;
     background-color: #00000088;
 }
+
 .comp-modal .modal {
     position: absolute;
     left: 50%;
@@ -39,6 +40,9 @@
     background: var(--button-bg-color);
     color: var(--leftbar-text-color);
     padding: 6px 24px;
+    min-width: 120px;
+    display: flex;
+    justify-content: center;
     border: none;
     outline: none;
     font-family: "Inter", sans-serif;
@@ -56,6 +60,18 @@
 }
 
 .comp-modal .modal footer button:focus-visible {
-    background-color: var(--button-bg-hover-color);
-    outline: 1px solid var(--leftbar-text-color);
+    outline: 2px solid var(--link-text-color);
+}
+
+.comp-modal .modal footer .second-button {
+    background-color: transparent;
+    color: var(--leftbar-bg-color);
+}
+
+.comp-modal .modal footer .second-button:hover {
+    background-color: var(--bot-bubble-bg-color);
+}
+
+.comp-modal .modal footer .second-button:active {
+    background-color: var(--rightbar-input-border-color);
 }
