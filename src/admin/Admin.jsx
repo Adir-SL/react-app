@@ -7,6 +7,7 @@ import Sidebar from "./components/Sidebar";
 import Table from "./components/Table";
 import Breadcrumbs from './components/Breadcrumbs';
 import Tabs from "./components/Tabs";
+import Flow from "./components/Flow";
 
 const Admin = () => {
     const { sessionId, setSessionId, username, setUsername } = useContext(AppContext);
@@ -23,10 +24,11 @@ const Admin = () => {
                 <Sidebar />
                 <div className="content">
                     <Breadcrumbs />
+                    {/* <Flow /> */}
                     <Tabs label={["First tab", "Second one", "Center one", "Forth forth", "Last tab"]} selected="0" />
                     <Table data={[
                         { name: <a href="admin/drilldown.html" target="drill">David</a>, created: "6 October 2016", updated: "6 October 2016", tags: "Complaint", resolved: true },
-                        { name: <a href="admin/drilldown.html" target="drill">Michael</a>, created: "2 January 2018", updated: "2 January 2018", tags: "Complaint", resolved: true },
+                        { name: <a href="admin/drillflow.html" target="drill">Michael</a>, created: "2 January 2018", updated: "2 January 2018", tags: "Complaint", resolved: true },
                         { name: <a href="admin/drilldown.html" target="drill">Kate</a>, created: "28 February 2020", updated: "28 February 2020", tags: "Support", resolved: false },
                         { name: <a href="admin/drilldown.html" target="drill">Barry</a>, created: "14 May 2020", updated: "14 May 2020", tags: "Support", resolved: false },
                         { name: <a href="admin/drilldown.html" target="drill">Daniel</a>, created: "19 June 2023", updated: "19 June 2023", tags: "Support", resolved: false },
