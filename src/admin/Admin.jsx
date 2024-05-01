@@ -7,7 +7,6 @@ import Sidebar from "./components/Sidebar";
 import Table from "./components/Table";
 import Breadcrumbs from './components/Breadcrumbs';
 import Tabs from "./components/Tabs";
-import Flow from "./components/Flow";
 
 const Admin = () => {
     const { sessionId, setSessionId, username, setUsername } = useContext(AppContext);
@@ -24,7 +23,6 @@ const Admin = () => {
                 <Sidebar />
                 <div className="content">
                     <Breadcrumbs />
-                    {/* <Flow /> */}
                     <Tabs label={["First tab", "Second one", "Center one", "Forth forth", "Last tab"]} selected="0" />
                     <Table data={[
                         { name: <a href="admin/drilldown.html" target="drill">David</a>, created: "6 October 2016", updated: "6 October 2016", tags: "Complaint", resolved: true },
