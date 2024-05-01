@@ -13,7 +13,7 @@ const Drillflow = () => {
             <div className="content">
                 {/* <Breadcrumbs /> */}
                 <Tabs label={["First tab", "Second one", "Center one", "Forth forth", "Last tab"]} selected="0" />
-                <Flow initialNodes={[{ id: '1', position: { x: 50, y: 50 }, data: { label: 'item-1' } }, { id: '2', position: { x: 150, y: 150 }, data: { label: 'item-2' } }, { id: '3', position: { x: 50, y: 250 }, data: { label: 'item-3' } }]} initialEdges={[{ id: 'e1-2', source: '1', target: '2' }, { id: 'e2-3', source: '2', target: '3' }]} />
+                <Flow initialNodes={[{ id: '1', position: { x: 50, y: 50 }, data: { label: 'Input' } }, { id: '2', position: { x: 150, y: 150 }, data: { label: 'Model' } }, { id: '3', position: { x: 50, y: 250 }, data: { label: 'Result' } }]} initialEdges={[{ id: 'e1-2', source: '1', target: '2' }, { id: 'e2-3', source: '2', target: '3' }]} />
             </div>
         </div>
     )
