@@ -52,8 +52,8 @@ const Message = ({ setter }) => {
     )
 };
 
-// TODO: Add admin pages for Leftbar categories + selected
-// TODO: Add graphs for an option for a drilldown screen
-// TODO: Tabs component for table/ pages/ whatever
+// [X] TODO: Add admin pages for Leftbar categories + selected
+// [X] TODO: Add graphs for an option for a drilldown screen
+// [X] TODO: Tabs component for table/ pages/ whatever
 
 export default Message;
