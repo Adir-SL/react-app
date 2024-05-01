@@ -21,11 +21,12 @@ const initialEdges = [
     { id: 'e2-3', source: '2', target: '3' }
 ];
 
-const Flow = () => {
+const Flow = (props) => {
     const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
     const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
     const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), [setEdges]);
+    const proOptions = { hideAttribution: true };
 
     return (
         <ReactFlow
@@ -34,6 +35,8 @@ const Flow = () => {
             onNodesChange={onNodesChange}
             onEdgesChange={onEdgesChange}
             onConnect={onConnect}
+            fitView
+            proOptions={proOptions}
         >
             <MiniMap />
             <Controls />
