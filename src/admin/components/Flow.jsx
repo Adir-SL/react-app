@@ -30,7 +30,7 @@ const Flow = (props) => {
         >
             <MiniMap />
             <Controls />
-            <Background />
+            <Background variant="dots" gap={12} size={1} />
         </ReactFlow>
     );
 }
