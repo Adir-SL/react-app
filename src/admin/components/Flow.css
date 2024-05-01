@@ -1,0 +1,16 @@
+.react-flow__node-default {
+    color: var(--text-color) !important;
+    border-color: var(--text-color) !important;
+}
+.react-flow__node-default .react-flow__handle{
+    background-color: var(--text-color);
+}
+
+.react-flow__node-default.selectable.selected {
+    color: var(--button-bg-color) !important;
+    border-color: var(--button-bg-color) !important;
+    box-shadow: 0 0 0 1px var(--button-bg-color) !important;
+}
+.react-flow__node-default.selectable.selected .react-flow__handle{
+    background-color: var(--button-bg-color);
+}
