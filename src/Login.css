@@ -44,6 +44,7 @@
     margin-top: 24px;
     line-height: 1.5;
     width: 100%;
+    max-width: 320px;
     color: var(--failed-color);
 }
 
