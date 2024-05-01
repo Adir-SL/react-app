@@ -34,4 +34,11 @@ const Flow = (props) => {
         </ReactFlow>
     );
 }
+function zoomOut() {
+    setTimeout(function () {
+        document.getElementsByTagName("button")[6].click();
+        document.getElementsByTagName("button")[6].click();
+    }, 50);
+}
+zoomOut();
 export default Flow;

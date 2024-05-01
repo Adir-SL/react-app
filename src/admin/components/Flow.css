@@ -2,7 +2,8 @@
     color: var(--text-color) !important;
     border-color: var(--text-color) !important;
 }
-.react-flow__node-default .react-flow__handle{
+
+.react-flow__node-default .react-flow__handle {
     background-color: var(--text-color);
 }
 
@@ -11,6 +12,28 @@
     border-color: var(--button-bg-color) !important;
     box-shadow: 0 0 0 1px var(--button-bg-color) !important;
 }
-.react-flow__node-default.selectable.selected .react-flow__handle{
+
+.react-flow__node-default.selectable.selected .react-flow__handle {
     background-color: var(--button-bg-color);
+}
+
+.react-flow {
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px var(--rightbar-input-border-color);
+    opacity: 0;
+    animation: opacAnim 100ms linear forwards;
+}
+
+@keyframes opacAnim {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
