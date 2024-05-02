@@ -8,6 +8,7 @@
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: var(--text-size-16);
+    min-height: 32px;
     cursor: pointer;
 }
 .comp-button:hover{
